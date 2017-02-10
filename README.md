@@ -9,8 +9,11 @@
 To be completed...
 
 ## Author List
-Aidan Abdulali - Student at Packer Collegiate Institute
+Aidan Abdulali - Student at Packer Collegiate Institute 
+
 Mark Hannel - PhD Student at New York University
+
 Chen Wang - PhD Student at New York University
+
 David Grier - Professor at New York University
 
