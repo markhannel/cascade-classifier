@@ -7,8 +7,11 @@
 
 ## Author List:
 Aidan Abdulali - High School Student, Packer Collegiate Institute
+
 Mark Hannel - Physics PhD Candidate, New York University
+
 Chen Wang - Physics PhD Candidate, New York University
+
 David Grier - Physics Professor, New York University
 
 ## Where to Get It.
@@ -20,3 +23,4 @@ David Grier - Physics Professor, New York University
 3. Profiles of detection accuracy and speed.
 
 ## Licensing.
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
