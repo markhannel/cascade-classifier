@@ -3,7 +3,7 @@
 <b> A module providing the ability to train cascade classifiers on holographic snapshots. </b>
 
 ## Explanation of the module.
-`cascade-classifier` provides a set of bash scripts which utilize OpenCV's object detection capabilities. A cascade classifier is trained with `opencv_traincascade` over a set of positive and negative images. After proper training, the classifier can be used in Python directly with `cv2.CascadeClassifier.detectMultiScale`.
+`cascade-classifier` provides a set of bash scripts which utilize OpenCV's object detection capabilities. A cascade classifier is trained with `opencv_traincascade` over a set of positive and negative images. After proper training, the classifier can be used in Python directly with `cv2.CascadeClassifier.detectMultiScale`. For convenience, a detection module is provided.
 
 ## Author List:
 Aidan Abdulali - High School Student, Packer Collegiate Institute
