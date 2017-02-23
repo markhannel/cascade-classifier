@@ -87,9 +87,12 @@ class Detector(object):
         cv2.imshow('Features found in image.', image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
-        
-if __name__ == '__main__':
+
+def test_main():
     cascade_fn = 'cascade_example.xml'
     test_img = 'test1.png'
     detector = Detector(cascade_fn)
     detector.detect(test_img, view_detection = True)
+    
+if __name__ == '__main__':
+    test_main()
