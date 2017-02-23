@@ -7,8 +7,6 @@ name='Features_'
 # Check if there is a first instance of Features.
 if [ ! -d Features_001 ]; then
     cp -r .master_file Features_001
-
-# Else generate a directory with an incremental higher name.
 else
 
     master_file='./.master_file/'
