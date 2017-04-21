@@ -1,6 +1,16 @@
 import cv2
 import numpy as np
 
+def bytscl(image):
+    """Scales a float image to be a uint8."""
+    min_  = image.min()
+    max_  = image.max()
+    delta = 2**8/(max_-min_)
+    nuimage = (image - min_)
+    nuimage *= delta
+    
+    return np.rint(nuimage).astype('uint8')
+
 class Detector(object):
     """Detector loads a classifier for use in detection.
 
