@@ -1,10 +1,12 @@
 import cv2
 import numpy as np
 
-def bytscl(image):
+def bytscl(image, min_=None, max_=None):
     """Scales a float image to be a uint8."""
-    min_  = image.min()
-    max_  = image.max()
+    if min_ is None: 
+        min_ = image.min()
+    if max_ is None:
+        max_  = image.max()
     delta = 2**8/(max_-min_)
     nuimage = (image - min_)
     nuimage *= delta
@@ -35,7 +37,7 @@ class Detector(object):
         self.min_size = (10, 10)
         self.max_size = (300, 300)
         
-    def detect(self, image_fn,
+    def detect(self, image,
                scale_factor=None,
                min_neighbors=None,
                min_size=None,
@@ -56,8 +58,10 @@ class Detector(object):
 
         if max_size is None:
             max_size = self.max_size
-            
-        image = cv2.imread(image_fn, 0) #'0' denotes grayscale img.
+
+        if type(image) != np.ndarray:
+            image = cv2.imread(image_fn, 0) #'0' denotes grayscale img.
+
         features = self.cascade.detectMultiScale(image,
                                                  scale_factor,
                                                  min_neighbors,
@@ -83,7 +87,7 @@ class Detector(object):
             return features
 
         if filter_type == 'std_dev':
-            thresh = 5 # Whammy number.
+            thresh = 40 # Whammy number.
             features = [(x,y,w,h) for (x,y,w,h) in features if np.std(image[y:y+h, x:x+w]) > thresh]
             return features
 
